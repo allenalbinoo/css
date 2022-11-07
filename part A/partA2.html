@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentValidation</title>
+    <script>
+        function validate()
+        {
+            var myArray = new Array();
+            for (var i=0; i<document.myForm.length; i++)
+            {
+                if(document.myForm.elements[i].value.length==0)
+                {
+                    myArray.push(document.myForm.elements[i].name);
+                }
+            }
+            if(myArray.length !=0)
+            {
+                alert("The Following text Boxes Are empty:\n"+myArray);
+            }
+        }
+    </script>
+</head>
+<body bgcolor="blue" text="white">
+    <h1 align="center">Text Box Validation</h1>
+    <hr>
+
+    <form action="" name="myForm" onsubmit="validate()">
+        <b>Name:</b><input type="text" name="Name"><br>
+        <b>Class:</b><input type="text" name="Class"><br>
+        <b>Age:</b><input type="text" name="Age"><br><br>
+        <input type="submit" value="Send Msg">
+    </form>
+    
+</body>
+</html>

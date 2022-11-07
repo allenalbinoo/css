@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countformelement</title>
+    <script>
+        function countFormElement()
+        {
+            alert("The Number of Form Elemensts are: "+document.myForm.length);
+        }
+    </script>
+</head>
+<body bgcolor="blue" text="white">
+    <h1 align="center">Counting Form Elemensts</h1>
+    <hr>
+
+    <form action="" name="myForm" align="left">
+        <b>Name:</b><input type="text"><br><br>
+        <b>Password:</b><input type="password"><br><br>
+        <b>Address:</b>
+        <textarea id="emailBody" cols="50" rows="10"></textarea><br><br>
+        <b>Sex:</b><input type="radio" name="gender" id="">Male
+            <input type="radio" name="gender">Female<br>
+        <b>Newsletter:</b><input type="checkbox" checked="checked"><br><br>
+        <input type="button" value="Send Msg" onclick="countFormElement()">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Animation</title>
+    <style>
+        #layar1
+        {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #layar2
+        {
+            position: absolute;
+            top: 50px;
+            left: 150px;
+        }
+        #layar3
+        {
+            position: absolute;
+            top: 50px;
+            left: 250px;
+        }
+    </style>
+    <script>
+        function moveImage(layar)
+        {
+            var top = window.prompt("Enter Top Value")
+            var left = window.prompt("Enter Left Value");
+            document.getElementById(layar).style.top=top+'px';
+            document.getElementById(layar).style.left=left+'px';
+        }
+    </script>
+
+</head>
+<body bgcolor="blue" text="white">
+    <div id="layar1">
+        <img src="programmer.png" alt="" onclick="moveImage('layar1')">
+    </div>
+    <div id="layar2">
+        <img src="programmer.png" alt="" onclick="moveImage('layar2')">
+    </div>
+    <div id="layar3">
+        <img src="programmer.png" alt="" onclick="moveImage('layar3')">
+    </div>
+    
+</body>
+</html>

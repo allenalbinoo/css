@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var day_names = new
+        Array("Sun","Mon","Tue","Wed","Thu","Fry","Sat");
+
+        var month_names = new
+        Array("Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec");
+
+        var d = new Date();
+        var curr_day = d.getDay();
+        var curr_month = d.getMonth();
+        var curr_year = d.getFullYear();
+        var curr_date = d.getDate();
+        var sp = "st";
+
+        if(curr_date==1 || curr_date==21 || curr_date==31)
+        {
+            sp="st";
+        }else if(curr_date==2 || curr_date==22)
+        {
+            sp="nd";
+        }else if(curr_date==3 || curr_date==23)
+        {
+            sp="rd";
+        }else
+        {
+            sp="th";
+        }
+
+        document.write("<h1><center><b>"+day_names[curr_day]+","+curr_date+"<sup>"+sp+"</sup>"+month_names[curr_month]+","+curr_year+"</b></center></h1>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

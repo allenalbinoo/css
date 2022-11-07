@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Conversion</title>
+    <script>
+        function toUpper()
+        {
+            document.getElementById("name").value=document.getElementById("name").value.toUpperCase();
+
+        }
+        function toLower()
+        {
+            document.getElementById("name").value=document.getElementById("name").value.toLowerCase();
+        }
+
+    </script>
+</head>
+<body bgcolor="blue" text="white">
+    <center>
+        <h1>CASE CONVERSION</h1>
+        <hr>
+        <form action="">
+            <h2>Enter Your Name:<input type="text" id="name"></h2><br><br>
+            <input type="button" value="Uppercase" onclick="toUpper()">
+            <input type="button" value="Lowercase" onclick="toLower()">
+        </form>
+    </center>
+    
+</body>
+</html>

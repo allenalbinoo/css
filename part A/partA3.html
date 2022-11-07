@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+    <script>
+        function www()
+        {
+            var enterdExpr = document.getElementById("exprr").value;
+            document.getElementById("result").value=eval(enterdExpr);
+        }
+    </script>
+</head>
+<body bgcolor="blue" text="white">
+    <h1 align="center">Evaluating Mathematical Expression</h1>
+    <hr>
+
+    <form action="" name="myForm">
+        <b>Enter Any Valid Expression:</b><input type="text" id="exprr" /><br><br>
+        <input type="button" value="Evaluate" onclick="www()" /><br><br>
+        <b>Result of the Expression:</b><input type="text" id="result" /><br><br>
+    </form>
+    
+</body>
+</html>

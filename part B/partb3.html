@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formandformelements</title>
+    <script>
+        function formdata(ja)
+        {
+            document.write("Your Name: "+ja.username.value+"<br>");
+            document.write("Your Email ID: "+ja.email.value+"<br>");
+            document.write("Your Address: "+ja.address.value+"<br>");
+            document.write("Gender: "+ja.gender.value+"<br>");
+
+            document.write("Languages knwon: ");
+                for(var i in ja.language)
+                {
+                    if(ja.language[i].checked)
+                    {
+                        document.write(ja.language[i].value+",");
+                    }
+                }
+            document.write("<br>");
+            document.write("Course Completed: "+ja.course.value+"<br>");
+            document.write("Resume File: "+ja.resume.value+"<br>");
+
+
+        }
+    </script>
+</head>
+<body>
+    <form name="ja">
+        <label for="">Name:</label>
+        <input type="text" name="username" maxlength="50">
+        <br>
+        <label for="">Email ID:</label>
+        <input type="email" name="email">
+        <br>
+        <label for="">Address:</label>
+        <textarea name="address" id="" cols="60" rows="25" placeholder="Please Enter Your Address..">
+        </textarea>
+        <br>
+        <label for="">Gender: </label>
+        <label for=""><input type="radio" name="gender" value="male">Male</label>
+        <label for=""><input type="radio" name="gender" value="female">Female</label>
+        <label for=""><input type="radio" name="gender" value="other">Other</label>
+        <br>
+        <label for="">What Languages Do You Speak?</label><br>
+        <label for=""><input type="checkbox" name="language" id="" value="English">English</label><br>
+        <label for=""><input type="checkbox" name="language" id="" value="Hindi">Hindi</label><br>
+        <label for=""><input type="checkbox" name="language" id="" value="Kannada">Kannada</label><br>
+        <label for=""><input type="checkbox" name="language" id="" value="Malayalam">Malayalam</label><br>
+        <br>
+        <label for="">Your Qualification</label>
+        <select name="course" id="">
+            <option value="" selected="selected">select courses</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="BCOM">BCOM</option>
+            <option value="BSC">BSC</option>
+        </select>
+        <br>
+        <label for="">Resume Upload</label>
+        <input type="file" name="resume">
+        <br>
+        <input type="submit" name="submit" value="Submit" onclick="formdata(ja)">
+        <input type="reset" name="reset" value="Reset">
+    </form>     
+</body>
+</html>

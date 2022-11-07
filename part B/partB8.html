@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mvmntofelmnt</title>
+</head>
+<style>
+    #movable{
+        position: absolute;
+    }
+</style>
+<script>
+    var x = 53;
+    var y = 77;
+    var d_x = 600;
+    var d_y = 600;
+    var interval = 10;
+
+    function moveImage()
+    {
+        if(x<d_x)x=x+interval;
+        if(y<d_y)y=y+interval;
+
+        document.getElementById("movable").style.top = y +'px';
+        document.getElementById("movable").style.left = x +'px';
+
+        if((x+interval<d_x)&&(y+interval<d_y)){
+            window.setTimeout("moveImage()",100);
+        }
+    }
+</script>
+<body onload="moveImage()">
+    <div id="movable">
+        <img src="programmer.png" alt="">
+    </div>
+    
+</body>
+</html>
